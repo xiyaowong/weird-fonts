@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weird Fonts</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="text" />
+      <select v-model="selectedFont">
+        <option disabled value="">Select font</option>
+        <option v-for="font in fonts" :key="font">{{ font }}</option>
+      </select>
+      <select v-model="selectedStyle">
+        <option disabled value="">Select style</option>
+        <option v-for="style in styles" :key="style">{{ style }}</option>
+      </select>
+      <div>{{ output }}</div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
